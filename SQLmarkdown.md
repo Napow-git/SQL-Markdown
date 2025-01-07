@@ -55,14 +55,16 @@ Eksempler på kommandoer er.
 - Grant: Giver bruger tilladese til at bruge Databasen I.e Grant Select on TECTStudentDB to "John Walsh", "Shawn Hennesay";
 - Rework: Nægter eller tilbage tager retiheder for Datasen. I.e  Revoke Select on TECTStudentDB to  "John Walsh", "Shawn Hennesay";
 
-### TCL Hjælper med at skabe savepoints og kontroller hvordan man gemmer sin database, normalt er databaser sættet til autocommit hvor den automatisk gemmer sin database men det er også godt ha' kontrol over vis man ved uheld sletter eller laver ændringer man gerne vil rette.
+### TCL 
+
+Hjælper med at skabe savepoints og kontroller hvordan man gemmer sin database, normalt er databaser sættet til autocommit hvor den automatisk gemmer sin database men det er også godt ha' kontrol over vis man ved uheld sletter eller laver ændringer man gerne vil rette.
 
 Eksempler på kommandoer er:
 
-Autocommit: Gemmer databaseen automatisk I.e Set Autocommit = On/Off;
-Commit: Manuelt gemmer sin database
-Savepoint: Gemmer database med et bestemt navn I.e Savapoint RedMig 
-Rollback: Fremhæver data fra den seneste Commit, vis man skal vælge en savepoint bruger man "Rollback To" komandoen: I.E Rollback to RedMig
+- Autocommit: Gemmer databaseen automatisk I.e Set Autocommit = On/Off;
+- Commit: Manuelt gemmer sin database
+- Savepoint: Gemmer database med et bestemt navn I.e Savapoint RedMig 
+- Rollback: Fremhæver data fra den seneste Commit, vis man skal vælge en savepoint bruger man "Rollback To" komandoen: I.E Rollback to RedMig
 
 
 ## Andre komandoer
