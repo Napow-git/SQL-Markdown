@@ -31,11 +31,11 @@ Alter Table TECTStudentDB Rename to TECTStudentDB1
 - Drop: Sletter talellen: I.e
 
 ```SQL
-  Drop Table TECTStudentDB
+Drop Table TECTStudentDB
 ``` 
 - Truncate: Sletter alt data inde i tabelen men ikke selve tabelen. I.e
 ```SQL
- TRUNCATE TABLE TECTStudentDB
+TRUNCATE TABLE TECTStudentDB
 ``` 
 
 
@@ -44,7 +44,7 @@ Alter Table TECTStudentDB Rename to TECTStudentDB1
 DQL er den mest simple kommando men også en er de meste vigige, fordi den eneste komando der tilhøre den er "Select", hvor man hender data gemmen en query hvor man kan vælge en eller flere kolonner fra en tabel I.E 
 
 ```SQL
- Select Name From TECTStudentDB.
+Select Name From TECTStudentDB.
 ``` 
 
 
@@ -64,11 +64,11 @@ Eksempler på kommandoer er:
 
 - Insert: Sætter data in I en tabel Insert into vælger den tabel man vælger og Values er de værdier man vil tilføje I tabelen I.E 
  ```SQL
- Insert into TECTStudentDB(StudentID, Name) Values(1, 'Michael Rasmussen')
+Insert into TECTStudentDB(StudentID, Name) Values(1, 'Michael Rasmussen')
 ``` 
 - Update: Updater eller regider data i tablen. Det er altid en god ide at bruge Primary Keyen som "Where" Syntaksen for at være sikker på at man har valgt en rette felt. I.E 
 ```SQL
- Update TECTStudentDB Set Name = 'Ole'; TECTStudentDB
+Update TECTStudentDB Set Name = 'Ole'; TECTStudentDB
 ``` 
 - Delete: Sletter data I tablen I.E Delete Name Where TECTStudentDB = 1
 ```SQL
@@ -80,9 +80,14 @@ DCL giver eller tag tilladelse til at bruge databasen og framhæve data til at b
 
 Eksempler på kommandoer er.
 
-- Grant: Giver bruger tilladese til at bruge Databasen I.e Grant Select on TECTStudentDB to "John Walsh", "Shawn Hennesay";
-- Rework: Nægter eller tilbage tager retiheder for Datasen. I.e  Revoke Select on TECTStudentDB to  "John Walsh", "Shawn Hennesay";
-
+- Grant: Giver bruger tilladese til at bruge Databasen I.e 
+```SQL
+Grant Select on TECTStudentDB to "John Walsh", "Shawn Hennesay";
+``` 
+- Rework: Nægter eller tilbage tager retiheder for Datasen. I.e  
+```SQL
+Revoke Select on TECTStudentDB to  "John Walsh", "Shawn Hennesay";
+``` 
 ### TCL 
 
 Hjælper med at skabe savepoints og kontroller hvordan man gemmer sin database, normalt er databaser sættet til autocommit hvor den automatisk gemmer sin database men det er også godt ha' kontrol over vis man ved uheld sletter eller laver ændringer man gerne vil rette.
@@ -90,10 +95,21 @@ Hjælper med at skabe savepoints og kontroller hvordan man gemmer sin database, 
 Eksempler på kommandoer er:
 
 - Autocommit: Gemmer databaseen automatisk I.e Set Autocommit = On/Off;
+```SQL
+Set Autocommit = On, Off
+``` 
 - Commit: Manuelt gemmer sin database
+```SQL
+Commit
+``` 
 - Savepoint: Gemmer database med et bestemt navn I.e Savapoint RedMig 
+```SQL
+Savapoint RedMig
+``` 
 - Rollback: Fremhæver data fra den seneste Commit, vis man skal vælge en savepoint bruger man "Rollback To" komandoen: I.E Rollback to RedMig
-
+```SQL
+Rollback to RedMig
+``` 
 
 ## Andre komandoer
 
