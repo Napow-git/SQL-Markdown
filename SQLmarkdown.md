@@ -20,14 +20,34 @@ Desse konmander er målrettet til opgaver så som uplægning af databaser, CRUD 
 DDL er den grundlæggenet set af kommandoer i SQL, det er simpelt men også fundementalt at kende dem fordi det inholder Create, Alter Tuncate og Drop
 
 - Create: Skaber en ny tabel I.e Create Table TECTStudentDB
-- Alter: Rediger talel til at giv et nyt navn, droppe/slete den. I.e Alter Table Add PostCode INT(255)
-  - Rename: Skifter tabelens name når man bruger alter talbe. I.E Alter Table TECTStudentDB Rename to TECTStudentDB1  
-- Drop: Sletter talellen: I.e Drop Table TECTStudentDB
-- Truncate: Sletter alt data inde i tabelen men ikke selve tabelen. I.e Truncate Table TECTStudentDB
+- Alter: Rediger talel til at giv et nyt navn, droppe/slete den. I.e
+```SQL
+Alter Table Add PostCode INT(255)
+```
+  - Rename: Skifter tabelens name når man bruger alter talbe. I.E
+```SQL
+Alter Table TECTStudentDB Rename to TECTStudentDB1
+``` 
+- Drop: Sletter talellen: I.e
+
+```SQL
+  Drop Table TECTStudentDB
+``` 
+- Truncate: Sletter alt data inde i tabelen men ikke selve tabelen. I.e
+```SQL
+ TRUNCATE TABLE TECTStudentDB
+``` 
+
 
 ### DQL 
 
-DQL er den mest simple kommando men også en er de meste vigige, fordi den eneste komando der tilhøre den er "Select", hvor man hender data gemmen en query hvor man kan vælge en eller flere kolonner fra en tabel I.E Select Name From TECTStudentDB.
+DQL er den mest simple kommando men også en er de meste vigige, fordi den eneste komando der tilhøre den er "Select", hvor man hender data gemmen en query hvor man kan vælge en eller flere kolonner fra en tabel I.E 
+
+```SQL
+ Select Name From TECTStudentDB.
+``` 
+
+
 
 
 ### DML
@@ -42,10 +62,18 @@ DML er brugt til at hente, rediger, updater data i en database. De er de komando
 
 Eksempler på kommandoer er:
 
-- Insert: Sætter data in I en tabel Insert into vælger den tabel man vælger og Values er de værdier man vil tilføje I tabelen I.E Insert into TECTStudentDB(StudentID, Name) Values(1, 'Michael Rasmussen')
-- Update: Updater eller regider data i tablen. Det er altid en god ide at bruge Primary Keyen som "Where" Syntaksen for at være sikker på at man har valgt en rette felt. I.E Upate TECTStudentDB Set Name = 'Ole'; TECTStudentDB
+- Insert: Sætter data in I en tabel Insert into vælger den tabel man vælger og Values er de værdier man vil tilføje I tabelen I.E 
+ ```SQL
+ Insert into TECTStudentDB(StudentID, Name) Values(1, 'Michael Rasmussen')
+``` 
+- Update: Updater eller regider data i tablen. Det er altid en god ide at bruge Primary Keyen som "Where" Syntaksen for at være sikker på at man har valgt en rette felt. I.E 
+```SQL
+ Update TECTStudentDB Set Name = 'Ole'; TECTStudentDB
+``` 
 - Delete: Sletter data I tablen I.E Delete Name Where TECTStudentDB = 1
-
+```SQL
+Delete Name Where TECTStudentDB = 1
+``` 
 ### DCL
 
 DCL giver eller tag tilladelse til at bruge databasen og framhæve data til at beskyde det fra tyveri eller ander forme af hærværk.
